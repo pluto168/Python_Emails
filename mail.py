@@ -7,4 +7,13 @@ smtp_obj.starttls()
 
 email = input("Enter your email: ")
 password = getpass.getpass("Enter you password: ")
-smtp_obj.login(mail, password)
+smtp_obj.login(email, password)
+
+from_address = email
+to_address = email
+subject = input("Enter subject: ")
+message = input("Enter your message: ")
+full_message = "subject: " + subject + "\n" + message
+
+print(smtp_obj.send(from_address, to_address, full_message))
+smtp_obj.quit()
