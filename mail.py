@@ -9,6 +9,7 @@ email = input("Enter your email: ")
 password = getpass.getpass("Enter you password: ")
 smtp_obj.login(email, password)
 
+#send emails
 from_address = email
 to_address = email
 subject = input("Enter subject: ")
